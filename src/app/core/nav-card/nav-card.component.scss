@@ -1,0 +1,48 @@
+@import "../../../assets/sass-shared";
+
+.nav-card {
+  @extend %generic-card;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  background: rgb(55,55,55);
+  border-radius: 2px;
+}
+
+.portrait {
+  max-width: 100%;
+  filter: grayscale(100%)
+}
+
+.nav-element {
+  cursor: pointer;
+  background-color: rgb(37,37,37);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin: 1px 0;
+  font-size: 1.2em;
+}
+
+.nav-element:hover {
+  color: rgb(150,150,150);
+}
+
+.link-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 1px;
+  background-color: white;
+
+  > i {
+    margin: 0 10px;
+    color: grey;
+    font-size: 1.2em;
+  }
+}

@@ -1,0 +1,109 @@
+@import "../../assets/sass-shared";
+
+.about-card {
+  @extend %generic-card;
+  flex-direction: column;
+  margin: 10px;
+  padding: 24px;
+}
+
+.title {
+  .name {
+    font-size: 2em;
+    font-weight: 200;
+    margin: 20px 0;
+  }
+  .sub-title {
+    margin: 10px 0;
+    font-size: 1.5em;
+    font-weight: 100;
+  }
+}
+
+.about-text {
+  color: rgb(75,75,75);
+}
+
+.heading-wrapper {
+  display: block;
+  .heading {
+    display: inline-block;
+    border-bottom: 2px solid #c7c7c7;
+    padding: 10px 20px 10px 0;
+    margin: 30px 0;
+    font-size: 1em;
+    font-weight: 500;
+  }
+}
+
+
+.skill-element {
+  margin: 10px 0;
+  p {
+    color: grey;
+    margin: 0 5px 7px 5px;
+  }
+}
+
+.skill-divider {
+  display: block;
+  margin: 20px;
+}
+
+.progress-bar {
+  height: 10px;
+  position: relative;
+  background: white;
+  border: 1px solid rgb(43,194,83);;
+  border-radius: 25px;
+  padding: 0;
+}
+
+.progress-bar > span {
+  display: block;
+  height: 100%;
+  border-radius: 20px 8px 8px 20px;
+  background-color: rgb(43,194,83);
+  position: relative;
+  overflow: hidden;
+}
+
+.education-element {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  .date-tab {
+    position: absolute;
+    left: -62px;
+    top: 20px;
+    transform: rotate(270deg);
+    background-color: mediumaquamarine;
+    padding: 5px 20px;
+
+  }
+  .education-picture {
+    margin: 0 30px 0 16px;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    background: rgb(50,50,50);
+  }
+  .education-text {
+    color: grey;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 25px;
+  }
+}
+
+.education-divider {
+  margin: 10px 0;
+  height: 0;
+  display: block;
+  border-bottom: 1px solid #c7c7c7;
+}

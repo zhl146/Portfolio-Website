@@ -1,0 +1,32 @@
+%generic-card {
+  display: flex;
+  background: white;
+  border-radius: 2px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+/* two column vs 1 column layout */
+
+%nav-card-width {
+  @media screen and (max-width: 899px ){
+    width: 100%;
+  }
+  @media screen and (min-width: 900px) and (max-width: 1299px) {
+    width: 34%;
+  }
+  @media screen and (min-width: 1300px) {
+    width: 400px;
+  }
+}
+
+%router-container-width {
+  @media screen and (max-width: 899px ){
+    width: 100%;
+  }
+  @media screen and (min-width: 900px) and (max-width: 1299px) {
+    width: 66%;
+  }
+  @media screen and (min-width: 1300px) {
+    width: 900px;
+  }
+}

@@ -1,0 +1,30 @@
+@import "../assets/sass-shared";
+
+.app-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.content-container {
+  display: flex;
+  flex-flow: row wrap;
+  margin: auto;
+}
+
+.nav-container {
+  @extend %nav-card-width;
+}
+
+.router-container {
+  @extend %router-container-width;
+}
+
+.app-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background: rgb(240,240,240);
+}
