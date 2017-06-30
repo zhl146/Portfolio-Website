@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  contactForm;
+
+  constructor( private fb: FormBuilder ) { }
 
   ngOnInit() {
+    this.contactForm = this.fb.group({
+      content: this.fb.control(''),
+      senderEmail: this.fb.control(''),
+      sender: this.fb.control('')
+      }
+    )
   }
 
 }

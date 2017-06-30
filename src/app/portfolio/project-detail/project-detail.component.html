@@ -1,3 +1,22 @@
-<p>
-  project-detail works!
-</p>
+<app-card-title>
+  {{project.name}}
+</app-card-title>
+
+<div class="screenshot-container">
+  <div class="screenshot"></div>
+</div>
+
+<div class="description">
+  <p>{{project.description}}</p>
+</div>
+
+
+<div class="feature-container">
+  <div class="feature" *ngFor="let feature of project.featureList">
+    <div class="feature-img"></div>
+    <h4>{{feature.name}}</h4>
+    <p>{{feature.description}}</p>
+  </div>
+
+</div>
+

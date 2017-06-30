@@ -1,3 +1,17 @@
-<p>
-  contact works!
-</p>
+<app-card>
+  <app-card-title>Contact Me!</app-card-title>
+  <form class="contact-form"
+        novalidate
+        [formGroup]="contactForm">
+    <div class="info">
+      <input type="text" formControlName="sender" placeholder="Your name">
+      <input type="email" formControlName="senderEmail" placeholder="Your e-mail address">
+    </div>
+    <textarea class="message"
+              type="text"
+              formControlName="content"
+              placeholder="Your message" rows="4"></textarea>
+
+    <button>Send</button>
+  </form>
+</app-card>

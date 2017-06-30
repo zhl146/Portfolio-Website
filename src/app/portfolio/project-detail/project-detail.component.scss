@@ -1,0 +1,40 @@
+.screenshot-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.screenshot {
+  width: 300px;
+  height: 200px;
+  background: grey;
+  margin: 20px;
+}
+
+.description {
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.feature-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-img {
+  margin: 20px;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: grey;
+}

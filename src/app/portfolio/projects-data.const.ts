@@ -17,7 +17,9 @@ export const projects = [
     '',
     '',
     [
-      new Feature('Feature 1', 'This feature is cool', 'http://imageshack.com/a/img537/786/9ZkQcJ.jpg')
+      new Feature('Feature 1', 'This feature is cool', 'http://imageshack.com/a/img537/786/9ZkQcJ.jpg'),
+      new Feature('Feature 2', 'This feature is also cool', 'http://imageshack.com/a/img537/786/9ZkQcJ.jpg'),
+      new Feature('Feature 3', 'This feature is also cool', 'http://imageshack.com/a/img537/786/9ZkQcJ.jpg')
     ]
   ),
   new Project( 'Project 2',
@@ -36,7 +38,9 @@ export const projects = [
     '',
     '',
     [
-      new Feature('Feature 1', 'This feature is cool', 'http://imageshack.com/a/img537/786/9ZkQcJ.jpg')
+      new Feature('Feature 1', 'This feature is cool', 'http://imageshack.com/a/img537/786/9ZkQcJ.jpg'),
+      new Feature('Feature 2', 'This feature is also cool', 'http://imageshack.com/a/img537/786/9ZkQcJ.jpg'),
+      new Feature('Feature 3', 'This feature is also cool', 'http://imageshack.com/a/img537/786/9ZkQcJ.jpg')
     ]
   ), new Project( 'Project 3',
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante ' +
@@ -54,7 +58,9 @@ export const projects = [
     '',
     '',
     [
-      new Feature('Feature 1', 'This feature is cool', 'http://imageshack.com/a/img537/786/9ZkQcJ.jpg')
+      new Feature('Feature 1', 'This feature is cool', 'http://imageshack.com/a/img537/786/9ZkQcJ.jpg'),
+      new Feature('Feature 2', 'This feature is also cool', 'http://imageshack.com/a/img537/786/9ZkQcJ.jpg'),
+      new Feature('Feature 3', 'This feature is also cool', 'http://imageshack.com/a/img537/786/9ZkQcJ.jpg')
     ]
   ),
   new Project( 'Project 4',
@@ -73,7 +79,9 @@ export const projects = [
     '',
     '',
     [
-      new Feature('Feature 1', 'This feature is cool', 'http://imageshack.com/a/img537/786/9ZkQcJ.jpg')
+      new Feature('Feature 1', 'This feature is cool', 'http://imageshack.com/a/img537/786/9ZkQcJ.jpg'),
+      new Feature('Feature 2', 'This feature is also cool', 'http://imageshack.com/a/img537/786/9ZkQcJ.jpg'),
+      new Feature('Feature 3', 'This feature is also cool', 'http://imageshack.com/a/img537/786/9ZkQcJ.jpg')
     ]
   )
 ];
