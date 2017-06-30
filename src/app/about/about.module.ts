@@ -4,11 +4,13 @@ import { EducationComponent } from './education/education.component';
 import { SkillComponent } from './skill/skill.component';
 import { AboutComponent } from './about.component';
 import { SharedModule } from '../shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    BrowserAnimationsModule
   ],
   declarations: [
     EducationComponent,

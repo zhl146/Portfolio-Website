@@ -1,17 +1,15 @@
 .progress-container {
   height: 10px;
   position: relative;
-  background: white;
-  border: 1px solid rgb(43,194,83);;
+  background: transparent;
   border-radius: 25px;
   padding: 0;
+  overflow: hidden;
 }
 
 .progress {
   display: block;
   height: 100%;
-  border-radius: 20px 8px 8px 20px;
-  background-color: rgb(43,194,83);
   position: relative;
   overflow: hidden;
 }

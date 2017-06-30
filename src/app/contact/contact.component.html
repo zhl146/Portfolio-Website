@@ -1,17 +1,25 @@
 <app-card>
   <app-card-title>Contact Me!</app-card-title>
-  <form class="contact-form"
-        novalidate
-        [formGroup]="contactForm">
-    <div class="info">
-      <input type="text" formControlName="sender" placeholder="Your name">
-      <input type="email" formControlName="senderEmail" placeholder="Your e-mail address">
-    </div>
-    <textarea class="message"
-              type="text"
-              formControlName="content"
-              placeholder="Your message" rows="4"></textarea>
+  <div class="contact-content">
+    <form class="contact-form"
+          novalidate
+          [formGroup]="contactForm">
+      <div class="info">
+        <input type="text" formControlName="sender" placeholder="Your name">
+        <div class="spacer"></div>
+        <input type="email" formControlName="senderEmail" placeholder="Your e-mail address">
+      </div>
+      <textarea class="message"
+                type="text"
+                formControlName="content"
+                placeholder="Your message" rows="4"></textarea>
 
-    <button>Send</button>
-  </form>
+      <button class="submit-btn">Send</button>
+    </form>
+    <div class="social-btn-container">
+      <img class="social-btn" src="../../assets/icons/square-github.svg">
+      <img class="social-btn" src="../../assets/icons/square-linkedin.svg">
+      <img class="social-btn" src="../../assets/icons/square-googleplus.svg">
+    </div>
+  </div>
 </app-card>

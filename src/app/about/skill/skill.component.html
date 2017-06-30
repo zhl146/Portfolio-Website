@@ -2,7 +2,9 @@
   <div class="skill-label">
     <ng-content></ng-content>
   </div>
-  <div class="progress-container">
-    <span class="progress" [ngStyle]="{width: progress + '%'}"></span>
+  <div class="progress-container" [ngStyle]="{border: '1px solid ' + color}">
+    <span class="progress"
+          [@slideInLeft]
+          [ngStyle]="{width: progress + '%', backgroundColor: color}"></span>
   </div>
 </div>

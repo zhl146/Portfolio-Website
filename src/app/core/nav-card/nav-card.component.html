@@ -1,25 +1,33 @@
 <div class="nav-card">
   <img class="portrait" src="../../../assets/portrait.png">
-  <div class="nav-element" [routerLink]="['about']">
+  <div class="nav-element"
+       [routerLink]="['about']"
+       routerLinkActive="active-link">
     <span class="nav-text">ABOUT</span>
     <i class="material-icons">person</i>
   </div>
-  <div class="nav-element" [routerLink]="['portfolio']">
+  <div class="nav-element"
+       [routerLink]="['portfolio']"
+       routerLinkActive="active-link">
     <span class="nav-text">PORTFOLIO</span>
     <i class="material-icons">work</i>
   </div>
-  <div class="nav-element" [routerLink]="['blog']">
+  <div class="nav-element"
+       [routerLink]="['blog']"
+       routerLinkActive="active-link">
     <span class="nav-text">BLOG</span>
     <i class="material-icons">gesture</i>
   </div>
-  <div class="nav-element" [routerLink]="['contact']">
+  <div class="nav-element"
+       [routerLink]="['contact']"
+       routerLinkActive="active-link">
     <span class="nav-text">CONTACT</span>
     <i class="material-icons">send</i>
 
   </div>
   <div class="link-container">
-    <i class="material-icons">build</i>
-    <i class="material-icons">cached</i>
-    <i class="material-icons">account_balance</i>
+    <img class="social-btn" src="../../../assets/icons/round-github.svg">
+    <img class="social-btn" src="../../../assets/icons/round-linkedin.svg">
+    <img class="social-btn" src="../../../assets/icons/round-googleplus.svg">
   </div>
 </div>

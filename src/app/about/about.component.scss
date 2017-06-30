@@ -1,12 +1,22 @@
 @import "../../assets/sass-shared";
 
+.emphasize {
+  font-weight: 600;
+  color: #009688;
+  font-size: 1.1em;
+}
+
+.first-sentence {
+  font-weight: 600;
+}
+
 .about-text {
-  color: rgb(130,130,130);
+  color: rgb(100,100,100);
 }
 
 .skill-divider {
   display: block;
-  margin: 20px;
+  margin: 3.5em;
 }
 
 .education-divider {

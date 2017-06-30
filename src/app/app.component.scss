@@ -7,16 +7,19 @@
 
 .content-container {
   display: flex;
+  max-width: 100%;
   flex-flow: row wrap;
   margin: auto;
 }
 
 .nav-container {
   @extend %nav-card-width;
+  @extend %container-padding;
 }
 
 .router-container {
   @extend %router-container-width;
+  @extend %container-padding;
 }
 
 .app-background {

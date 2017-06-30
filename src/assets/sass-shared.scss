@@ -30,3 +30,12 @@
     width: 850px;
   }
 }
+
+%container-padding {
+  @media screen and (max-width: 899px ){
+    padding-bottom: 10px;
+  }
+  @media screen and (min-width: 900px) {
+    padding: 10px;
+  }
+}

@@ -5,7 +5,6 @@
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  margin: 10px;
   background: rgb(55,55,55);
   border-radius: 2px;
 }
@@ -28,8 +27,16 @@
   font-size: 1.2em;
 }
 
+.nav-element:active, .nav-element:focus {
+  outline: none;
+}
+
 .nav-element:hover {
-  color: rgb(150,150,150);
+  color: cyan;
+}
+
+.active-link {
+  color: cyan;
 }
 
 .link-container {
@@ -39,10 +46,16 @@
   padding: 20px;
   margin-top: 1px;
   background-color: white;
+}
 
-  > i {
-    margin: 0 10px;
-    color: grey;
-    font-size: 1.2em;
-  }
+.social-btn {
+  border-radius: 50%;
+  height: 2.5em;
+  width: 2.5em;
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+.social-btn:hover {
+  background: cyan;
 }
