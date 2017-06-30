@@ -2,7 +2,7 @@
 
 .emphasize {
   font-weight: 600;
-  color: #009688;
+  color: $accent;
   font-size: 1.1em;
 }
 
@@ -11,7 +11,7 @@
 }
 
 .about-text {
-  color: rgb(100,100,100);
+  color: $secondary-text;
 }
 
 .skill-divider {
