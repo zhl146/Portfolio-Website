@@ -1,0 +1,7 @@
+<div class="education-element">
+  <div [ngStyle]="{backgroundImage: 'url(' + imgSrc + ')'}" class="education-picture"></div>
+  <div class="education-text">
+    <p><ng-content select="[university]"></ng-content></p>
+    <p><ng-content select="[degree]"></ng-content></p>
+  </div>
+</div>

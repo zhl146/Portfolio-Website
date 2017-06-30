@@ -1,0 +1,26 @@
+.progress-container {
+  height: 10px;
+  position: relative;
+  background: white;
+  border: 1px solid rgb(43,194,83);;
+  border-radius: 25px;
+  padding: 0;
+}
+
+.progress {
+  display: block;
+  height: 100%;
+  border-radius: 20px 8px 8px 20px;
+  background-color: rgb(43,194,83);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-container {
+  margin: 10px 0;
+}
+
+.skill-label {
+  color: grey;
+  margin: 0 5px 7px 5px;
+}

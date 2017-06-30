@@ -1,0 +1,27 @@
+.education-element {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.education-picture {
+  margin: 0 30px 0 16px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-position: center center;
+  background-size: cover;
+
+}
+
+.education-text {
+  color: grey;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-right: 25px;
+}

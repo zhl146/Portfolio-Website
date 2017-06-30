@@ -1,0 +1,14 @@
+<div card-content>
+  <app-sub-heading>
+    My Portfolio
+  </app-sub-heading>
+
+  <div class="projects-container">
+    <app-project *ngFor="let project of projects; let i = index"
+                 [routerLink]="i">
+      {{project.name}}
+    </app-project>
+  </div>
+
+
+</div>
