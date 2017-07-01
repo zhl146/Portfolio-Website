@@ -1,16 +1,10 @@
 export class BlogPost {
   title: string;
-  date: Date;
-  imgPath: string;
-  text: string;
+  date: string;
+  content: PostElement[];
+}
 
-  constructor( title: string,
-               date: Date,
-               imgPath: string,
-               text: string ) {
-    this.title = title;
-    this.date = date;
-    this.imgPath = imgPath;
-    this.text = text;
-  }
+export class PostElement {
+  type: 'section-header' | 'image' | 'paragraph' | 'codeSnippet' | 'externalEmbed';
+  content: string;
 }

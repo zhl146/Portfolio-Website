@@ -1,5 +1,17 @@
-<div class="project-container">
-  <div class="project-name">
-    <ng-content></ng-content>
+<div class="project-container"
+     [style.background-image]="'url(' + project.imgPath + ')'">
+  <div class="overlay">
+    <div class="project-name">
+      {{project.name}}
+      <p>Responsive web application with authentication and persistent data storage.</p>
+    </div>
+
+    <div class="link-container">
+      <a *ngIf="project.demoLink !== ''"
+         [href]="project.demoLink"><div class="link">Demo</div></a>
+      <a *ngIf="project.gitHubLink !== ''"
+         [href]="project.gitHubLink"><div class="link">Source</div></a>
+
+    </div>
   </div>
 </div>

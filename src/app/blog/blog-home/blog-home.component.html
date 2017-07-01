@@ -1,5 +1,7 @@
-<app-card>
-    <app-card-title>UNDER CONSTRUCTION</app-card-title>
-    <p>I'm new at this - give me some time to write something.</p>
-</app-card>
+
+<div *ngFor="let blogPost of blogPosts; let i =index"
+     [routerLink]="i">
+  {{blogPost.title}}
+  {{blogPost.date}}
+</div>
 

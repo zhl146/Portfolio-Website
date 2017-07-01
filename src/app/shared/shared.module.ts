@@ -4,6 +4,7 @@ import { CardComponent } from './card/card.component';
 import { SubHeadingComponent } from './sub-heading/sub-heading.component';
 import { CardTitleComponent } from './card/card-title.component';
 import { CardSubtitleComponent } from './card/card-subtitle.component';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
   imports: [
@@ -13,13 +14,15 @@ import { CardSubtitleComponent } from './card/card-subtitle.component';
     CardComponent,
     SubHeadingComponent,
     CardTitleComponent,
-    CardSubtitleComponent
+    CardSubtitleComponent,
+    ButtonComponent
   ],
   exports: [
     CardComponent,
     SubHeadingComponent,
     CardTitleComponent,
-    CardSubtitleComponent
+    CardSubtitleComponent,
+    ButtonComponent
   ]
 })
 export class SharedModule { }

@@ -1,9 +1,9 @@
 @import "../../assets/sass-shared";
 
 .emphasize {
-  font-weight: 600;
   color: $accent;
   font-size: 1.1em;
+  font-weight: 600;
 }
 
 .first-sentence {
@@ -16,12 +16,22 @@
 
 .skill-divider {
   display: block;
-  margin: 3.5em;
+  margin: 50px;
 }
 
 .education-divider {
-  margin: 10px 0;
-  height: 0;
+  border-bottom: 1px solid $divider-color;
   display: block;
-  border-bottom: 1px solid #c7c7c7;
+  height: 0;
+  margin: 10px 0;
+}
+
+.cv-download {
+  background-color: $secondary;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  display: block;
+  margin: 40px auto 20px auto;
+  padding: 15px;
 }

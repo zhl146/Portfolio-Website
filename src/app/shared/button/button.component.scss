@@ -1,0 +1,15 @@
+@import "../../../assets/sass-shared";
+
+.generic-btn {
+  cursor: pointer;
+  display: inline-block;
+  border: none;
+  padding: 15px 25px;
+  color: white;
+  background: black;
+  border-radius: 2px;
+}
+
+.generic-btn:hover {
+  color: $accent;
+}

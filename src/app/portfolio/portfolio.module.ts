@@ -6,8 +6,6 @@ import { SharedModule } from '../shared/shared.module';
 
 import { ProjectListComponent } from './project-list/project-list.component';
 import { ProjectTileComponent } from './project-tile/project-tile.component';
-import { ProjectDetailComponent } from './project-detail/project-detail.component';
-import { PortfolioComponent } from './portfolio.component';
 import { ProjectsDataService } from './projects-data.service';
 
 @NgModule({
@@ -18,9 +16,7 @@ import { ProjectsDataService } from './projects-data.service';
   ],
   declarations: [
     ProjectListComponent,
-    ProjectTileComponent,
-    ProjectDetailComponent,
-    PortfolioComponent
+    ProjectTileComponent
   ],
   providers: [
     ProjectsDataService
