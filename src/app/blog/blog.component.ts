@@ -4,8 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-blog',
   template: `
     <app-card>
-      UNDER CONSTRUCTION
-      <!--<router-outlet></router-outlet>-->
+      <router-outlet></router-outlet>
     </app-card>
   `,
   styles: []

@@ -3,7 +3,7 @@
   <div class="overlay">
     <div class="project-name">
       {{project.name}}
-      <p>Responsive web application with authentication and persistent data storage.</p>
+      <p>{{project.description}}</p>
     </div>
 
     <div class="link-container">
@@ -11,7 +11,8 @@
          [href]="project.demoLink"><div class="link">Demo</div></a>
       <a *ngIf="project.gitHubLink !== ''"
          [href]="project.gitHubLink"><div class="link">Source</div></a>
-
+      <a *ngIf="project.blogRoute !== ''"
+         [routerLink]="project.blogRoute"><div class="link">Blog</div></a>
     </div>
   </div>
 </div>

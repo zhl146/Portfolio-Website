@@ -25,6 +25,7 @@
   padding: 15px;
   font-size: 1.2em;
   border-bottom: 2px solid rgb(75,75,75);
+  transition: all .3s ease-in-out;
 }
 
 .nav-element:active, .nav-element:focus {
@@ -36,7 +37,7 @@
 }
 
 .active-link {
-  border-left: 2px solid $accent;
+  border-left: 3px solid $accent;
 }
 
 .link-container {

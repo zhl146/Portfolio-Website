@@ -14,5 +14,19 @@ export const projects = [
     'https://github.com/zhl146/Recipe-Helper',
     'https://zhenlu.info/recipehelper',
     ''
+  ),
+  new Project( 'exBook Frontend',
+    'Hybrid web application built with ionic2',
+    'assets/img/project-img/exBook.png',
+    'https://github.com/zhl146/exbookfrontend',
+    '',
+    ''
+  ),
+  new Project( 'exBook Backend',
+    'REST API built using python/flask',
+    'assets/img/project-img/exBook.png',
+    'https://github.com/zhl146/exbookbackend',
+    '',
+    ''
   )
 ];

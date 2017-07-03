@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { BlogHomeComponent } from './blog-home/blog-home.component';
+import { BlogListComponent } from './blog-list/blog-list.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
 import { BlogComponent } from './blog.component';
 
 const blogRoutes = [
   { path: 'blog', component: BlogComponent,
-    // children: [
-    //   { path: ':id', component: BlogPostComponent },
-    //   { path: '', component: BlogHomeComponent, pathMatch: 'full'}
-    // ]
+    children: [
+      { path: ':year', component: BlogListComponent },
+      { path: ':year/:month', component: BlogListComponent },
+      { path: ':year/:month/:day', component: BlogListComponent },
+    ]
   }
 ];
 

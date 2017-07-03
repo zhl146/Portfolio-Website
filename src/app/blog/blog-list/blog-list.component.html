@@ -1,0 +1,6 @@
+<div *ngFor="let summary of blogSummaries | async; let i =index"
+     [routerLink]="i">
+  <h1>{{summary.title}}</h1>
+  <p>{{summary.create_date | date}}</p>
+</div>
+

@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { BlogHomeComponent } from './blog-home/blog-home.component';
+import { BlogListComponent } from './blog-list/blog-list.component';
 import { BlogRoutingModule } from './blog-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { BlogPostComponent } from './blog-post/blog-post.component';
 import { BlogDataService } from './blog-data.service';
 import { BlogComponent } from './blog.component';
+import { HttpWrapper } from '../shared/http-wrapper.service';
 
 @NgModule({
   imports: [
@@ -15,12 +16,13 @@ import { BlogComponent } from './blog.component';
     SharedModule
   ],
   declarations: [
-    BlogHomeComponent,
+    BlogListComponent,
     BlogPostComponent,
     BlogComponent
   ],
   providers: [
-    BlogDataService
+    BlogDataService,
+    HttpWrapper
   ]
 })
 export class BlogModule { }

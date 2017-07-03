@@ -1,10 +1,12 @@
-export class BlogPost {
+export interface BlogPost {
   title: string;
-  date: string;
-  content: PostElement[];
+  author: string;
+  create_date: string;
+  edit_date: string;
+  tag_list: string[];
+  content: string;
 }
 
-export class PostElement {
-  type: 'section-header' | 'image' | 'paragraph' | 'codeSnippet' | 'externalEmbed';
-  content: string;
+export interface BlogSummary extends BlogPost {
+  imgPath: string;
 }
