@@ -1,6 +1,9 @@
-<div *ngFor="let summary of blogSummaries | async; let i =index"
-     [routerLink]="i">
-  <h1>{{summary.title}}</h1>
-  <p>{{summary.create_date | date}}</p>
-</div>
-
+<ng-container *ngFor="let summary of blogSummaries | async; let i =index">
+  <a (click)="onBlogMore(summary.slug)"><h1 class="title">{{summary.title}}</h1></a>
+  <div class="subtitle">
+    <span class="date">{{summary.create_date | date}}</span>
+    <span class="tag" *ngFor="let tag of summary.tag_list">{{tag}}</span>
+  </div>
+  <div class="content" [innerHtml]="summary.content"></div>
+  <a class="more" (click)="onBlogMore(summary.slug)">read more...</a>
+</ng-container>

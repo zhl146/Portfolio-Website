@@ -1,14 +1,14 @@
 @import "../../../assets/sass-shared";
 
 .project-container {
+  @include aspect-ratio(1.33);
   background-size: cover;
   background-position: center;
   display: flex;
-  height: 200px;
-  margin: 10px;
+  margin: 5px;
   overflow: hidden;
   position: relative;
-  width: 300px;
+  width: 280px;
   transition: all .3s ease-in-out;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
@@ -25,7 +25,7 @@
   position: absolute;
   top: 0;
   > p {
-    font-size: .9em;
+    font-size: .8em;
     font-weight: 100;
   }
 }
@@ -50,12 +50,12 @@
 }
 
 .overlay {
-  background: rgba(37, 37, 37, 0.65);
+  background: rgba(37, 37, 37, 0.7);
   height: 100%;
   overflow: hidden;
   position: absolute;
   top: 0;
-  transform: translate(0, 300px);
+  transform: translate(0, 100%);
   transition: 200ms all ease-out;
   width: 100%;
 }

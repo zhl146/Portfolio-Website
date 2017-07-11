@@ -1,3 +1,5 @@
-<p>
-  blog-post works!
-</p>
+<h1 class="title">{{(blogPost | async)?.title}}</h1>
+<h2 class="subtitle">{{(blogPost | async)?.create_date | date}}</h2>
+
+<div class="content" [innerHtml]="(blogPost | async)?.content"></div>
+

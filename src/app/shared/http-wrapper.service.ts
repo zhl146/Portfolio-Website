@@ -28,4 +28,9 @@ export class HttpWrapper {
     return this.genericGet(endPoint)
   }
 
+  getBlogPost(title_slug) {
+    const endPoint = this.blogEndpoint + '/' + title_slug;
+    return this.genericGet(endPoint)
+  }
+
 }

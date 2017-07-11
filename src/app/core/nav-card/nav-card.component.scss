@@ -2,8 +2,9 @@
 
 .nav-card {
   @extend %generic-card;
+  @extend %nav-card-responsive;
+  margin: 10px;
   flex: 1 1 auto;
-  display: flex;
   flex-direction: column;
   background: rgb(55,55,55);
   border-radius: 2px;

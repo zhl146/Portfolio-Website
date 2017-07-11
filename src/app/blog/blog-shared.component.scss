@@ -1,0 +1,57 @@
+@import "../../assets/sass-shared";
+
+.title {
+  font-size: 1.5em;
+  cursor: pointer;
+  text-overflow: ellipsis;
+  overflow: hidden
+}
+
+.title:hover {
+  color: $secondary-text;
+}
+
+.subtitle {
+  display: inline;
+  font-size: 1em;
+  color: $secondary-text;
+  text-overflow: ellipsis;
+  overflow: hidden
+}
+
+.date {
+  padding-right: 10px;
+}
+
+.more {
+  cursor: pointer;
+  color: $primary;
+}
+
+.more:hover {
+  color: #3A7CA5;
+}
+
+:host /deep/ pre {
+  padding: 24px;
+  color: white;
+  background: rgb(75,75,75);
+}
+
+h1 {
+  font-size: .5em;
+}
+
+
+.content {
+  margin: 30px 0;
+  line-height: 1.5em;
+}
+
+.tag {
+  color: rgb(175,175,175);
+  border-radius: 10px;
+  font-size: .7em;
+  display: inline;
+  padding: 10px;
+}

@@ -5,6 +5,7 @@ export interface BlogPost {
   edit_date: string;
   tag_list: string[];
   content: string;
+  slug: string;
 }
 
 export interface BlogSummary extends BlogPost {

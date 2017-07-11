@@ -3,18 +3,25 @@ import { CommonModule } from '@angular/common';
 import { NavCardComponent } from './nav-card/nav-card.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { CoreComponent } from './core.component';
+import { CoreRoutingModule } from './core-routing.module';
+import { MobileToolbarComponent } from './mobile-toolbar/mobile-toolbar.component';
 
 @NgModule({
   imports: [
     CommonModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    CoreRoutingModule
   ],
   declarations: [
-    NavCardComponent
+    NavCardComponent,
+    CoreComponent,
+    MobileToolbarComponent
   ],
   exports: [
-    NavCardComponent
+    NavCardComponent,
+    MobileToolbarComponent
   ]
 })
 export class CoreModule { }

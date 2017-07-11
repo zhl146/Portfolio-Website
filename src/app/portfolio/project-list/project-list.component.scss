@@ -4,17 +4,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-}
-
-.project-container {
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  width: 300px;
-  height: 200px;
-  background: url('http://i347.photobucket.com/albums/p476/zhl146/recipehelper_zpsjo54en0u.png');
-  background-size: cover;
-  margin: 10px;
+  width:100%;
 }
 
 .project-container:hover {

@@ -2,24 +2,13 @@
 
 .app-container {
   display: flex;
-  flex-direction: row;
-}
-
-.content-container {
-  display: flex;
-  max-width: 100%;
   flex-flow: row wrap;
-  margin: auto;
-}
-
-.nav-container {
-  @extend %nav-card-width;
-  @extend %container-padding;
 }
 
 .router-container {
-  @extend %router-container-width;
-  @extend %container-padding;
+  @extend %content-responsive;
+  position: relative;
+  padding-bottom: 20px;
 }
 
 .app-background {

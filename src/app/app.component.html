@@ -1,13 +1,9 @@
-<div class="app-container">
-  <div class="content-container">
-    <div class="nav-container">
-      <app-nav-card></app-nav-card>
-    </div>
-    <div class="router-container">
-      <router-outlet></router-outlet>
-    </div>
+<div #appContainer class="app-container">
+  <app-mobile-toolbar></app-mobile-toolbar>
+  <app-nav-card></app-nav-card>
+  <div class="router-container">
+    <router-outlet></router-outlet>
   </div>
+
+  <div class="app-background"></div>
 </div>
-
-<div class="app-background"></div>
-
