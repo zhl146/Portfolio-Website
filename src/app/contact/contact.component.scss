@@ -1,3 +1,5 @@
+@import "../../assets/sass-shared";
+
 .contact-content {
   display: flex;
   flex-direction: row;
@@ -39,7 +41,7 @@ select {
   display: block;
   padding: 20px;
   border: none;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid $divider-color;
   background: transparent;
   margin-bottom: 10px;
   height: 45px;
@@ -57,7 +59,7 @@ select {
 }
 
 .submit-btn:hover {
-  background: seagreen;
+  color: $accent;
 }
 
 .social-btn-container {
@@ -75,5 +77,14 @@ select {
 }
 
 .social-btn:hover {
-  background: darkcyan;
+  background: $accent;
+}
+
+.invalid {
+  border-bottom: 2px solid red;
+}
+
+.error {
+  font-size: .8em;
+  color: red;
 }

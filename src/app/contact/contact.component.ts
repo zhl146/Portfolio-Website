@@ -17,19 +17,65 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
     this.contactForm = this.fb.group({
       message: this.fb.control('', Validators.required),
-      senderEmail: this.fb.control(''),
-      sender: this.fb.control('')
+      senderEmail: this.fb.control('', Validators.email),
+      sender: this.fb.control('', Validators.required)
       }
-    )
+    );
   }
 
   onSubmit() {
-    const emailJson = {
-      sender: this.contactForm.get('sender').value,
-      senderEmail: this.contactForm.get('senderEmail').value,
-      message: this.contactForm.get('message').value,
-    };
-    this.http.sendEmail(emailJson);
+    this.contactForm.get('message').markAsTouched();
+    this.contactForm.get('sender').markAsTouched();
+    this.contactForm.get('senderEmail').markAsTouched();
+    if (this.contactForm.valid) {
+      const emailJson = {
+        sender: this.contactForm.get('sender').value,
+        senderEmail: this.contactForm.get('senderEmail').value,
+        message: this.contactForm.get('message').value,
+      };
+
+      const data = JSON.stringify(emailJson);
+      console.log(data);
+      this.http.sendEmail(data)
+        .subscribe(
+          (response) => {
+            console.log(response)
+          }
+        )
+    }
   }
 
+  isValid(inputToCheck) {
+    const input = this.contactForm.get(inputToCheck);
+    if ( !input.touched ) {
+      return true;
+    } else {
+      return input.valid;
+    }
+  }
+
+  validClass(inputToCheck) {
+    return this.isValid(inputToCheck) ? 'valid' : 'invalid';
+  }
+
+  messageError() {
+    if ( this.isValid('message') ) {
+      return;
+    }
+    return 'Please type a message.';
+  }
+
+  senderError() {
+    if ( this.isValid('sender') ) {
+      return;
+    }
+    return 'Please input your name.';
+  }
+
+  emailError() {
+    if ( this.isValid('senderEmail') ) {
+      return;
+    }
+    return 'Please type your e-mail.';
+  }
 }

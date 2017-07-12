@@ -6,13 +6,29 @@
           (ngSubmit)="onSubmit()"
           [formGroup]="contactForm">
       <div class="info">
-        <input type="text" formControlName="sender" placeholder="Your name">
+        <div>
+          <input type="text" formControlName="sender"
+                 placeholder="Your name"
+                 [ngClass]="validClass('sender')">
+          <p class="error">{{senderError()}}</p>
+        </div>
+
         <div class="spacer"></div>
-        <input type="email" formControlName="senderEmail" placeholder="Your e-mail address">
+        <div>
+          <input type="email"
+                 formControlName="senderEmail"
+                 placeholder="Your e-mail address"
+                 [ngClass]="validClass('senderEmail')">
+          <p class="error">{{emailError()}}</p>
+        </div>
+
       </div>
       <textarea class="message"
-                formControlName="content"
+                formControlName="message"
+                [ngClass]="validClass('message')"
                 placeholder="Your message" rows="4"></textarea>
+
+      <p class="error">{{messageError()}}</p>
 
       <button type="submit" class="submit-btn">Send</button>
     </form>
