@@ -5,7 +5,7 @@
     </app-sub-heading>
 
     <div class="projects-container">
-      <app-project *ngFor="let project of projects"
+      <app-project *ngFor="let project of projects | async"
                    [project]="project">
       </app-project>
     </div>

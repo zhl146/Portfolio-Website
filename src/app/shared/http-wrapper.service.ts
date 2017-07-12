@@ -5,21 +5,23 @@ import { Http } from '@angular/http';
 export class HttpWrapper {
 
   private apiVersion = 'v1';
-  private baseUrl = 'http://localhost:8000';
+  private localUrl = 'http://localhost:8000';
+  private remoteUrl = 'https://zhenlu.info/portfolio';
 
   // endpoints
   private blogEndpoint = 'posts';
+  private projectEndpoint = 'projects';
 
   constructor( private http: Http ) { }
 
   genericGet(endPoint: string) {
     const fullUrl = this.createRoute(endPoint);
-    console.log(fullUrl)
     return this.http.get(fullUrl);
   }
 
   createRoute(endPoint: string): string {
-    return this.baseUrl + '/' + endPoint;
+    // return this.baseUrl + '/' + endPoint;
+    return this.remoteUrl + '/' + endPoint;
   }
 
   getRemoteSummaries(internalRoute: string, posts = 5, offset = 0) {
@@ -31,6 +33,11 @@ export class HttpWrapper {
   getBlogPost(title_slug) {
     const endPoint = this.blogEndpoint + '/' + title_slug;
     return this.genericGet(endPoint)
+  }
+
+  getProjects() {
+    const endPoint = this.projectEndpoint + '/';
+    return this.genericGet(endPoint);
   }
 
 }

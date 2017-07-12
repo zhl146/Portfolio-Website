@@ -1,18 +1,25 @@
 import { Injectable } from '@angular/core';
-import { Project } from './project.model';
-import { projects } from './projects-data.const'
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+
+import { HttpWrapper } from '../shared/http-wrapper.service';
 
 @Injectable()
 export class ProjectsDataService {
 
-  private projects: Project[] = projects;
+  private projects = new BehaviorSubject(null);
 
-  getProjects(): Project[] {
-    return this.projects;
+  constructor( private http: HttpWrapper ) {}
+
+  getProjects() {
+    return this.projects.asObservable();
   }
 
-  getProject(index: number): Project {
-    return this.projects[index];
+  retrieveProjects(): void {
+    this.http.getProjects()
+      .subscribe(
+        (response) => {
+          this.projects.next(response.json().projects);
+        }
+      )
   }
-
 }

@@ -33,8 +33,7 @@ export class BlogDataService {
     this.http.getBlogPost(title_slug)
       .subscribe(
         (response) => {
-          this.blogPost.next(response.json())
-          console.log(this.blogPost)
+          this.blogPost.next(response.json());
         }
       )
   }
