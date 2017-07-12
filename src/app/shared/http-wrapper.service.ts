@@ -11,12 +11,18 @@ export class HttpWrapper {
   // endpoints
   private blogEndpoint = 'posts';
   private projectEndpoint = 'projects';
+  private contactEndpoint = 'contact';
 
   constructor( private http: Http ) { }
 
   genericGet(endPoint: string) {
     const fullUrl = this.createRoute(endPoint);
     return this.http.get(fullUrl);
+  }
+
+  genericPost(endPoint: string, data) {
+    const fullUrl = this.createRoute(endPoint);
+    return this.http.post(fullUrl, data);
   }
 
   createRoute(endPoint: string): string {
@@ -38,6 +44,11 @@ export class HttpWrapper {
   getProjects() {
     const endPoint = this.projectEndpoint + '/';
     return this.genericGet(endPoint);
+  }
+
+  sendEmail(emailJson) {
+    const endPoint = this.contactEndpoint + '/';
+    return this.genericPost(endPoint, emailJson);
   }
 
 }

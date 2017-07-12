@@ -1,0 +1,56 @@
+<div class="toolbar">
+  <span>ZHEN LU</span>
+
+  <div id="hamburger"
+       [ngClass]="{'open': isActive }"
+       (click)="toggleActive()">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+</div>
+
+<div class="nav-card" [ngClass]="{'open': isActive }">
+  <div class="nav-element"
+       [routerLink]="['about']"
+       routerLinkActive="active-link"
+       (click)="toggleActive()">
+    <span class="nav-text">ABOUT</span>
+    <i class="material-icons">person</i>
+  </div>
+  <div class="nav-element"
+       [routerLink]="['portfolio']"
+       routerLinkActive="active-link"
+       (click)="toggleActive()">
+    <span class="nav-text">PORTFOLIO</span>
+    <i class="material-icons">work</i>
+  </div>
+  <div class="nav-element"
+       [routerLink]="['blog']"
+       routerLinkActive="active-link"
+       (click)="toggleActive()">
+    <span class="nav-text">BLOG</span>
+    <i class="material-icons">gesture</i>
+  </div>
+  <div class="nav-element"
+       [routerLink]="['contact']"
+       routerLinkActive="active-link"
+       (click)="toggleActive()">
+    <span class="nav-text">CONTACT</span>
+    <i class="material-icons">send</i>
+
+  </div>
+  <div class="link-container">
+    <a href="https://github.com/zhl146">
+      <img class="social-btn" src="../../../assets/icons/round-github.svg">
+    </a>
+    <a href="https://www.linkedin.com/in/zhl146/">
+      <img class="social-btn" src="../../../assets/icons/round-linkedin.svg">
+    </a>
+    <a href="https://plus.google.com/u/0/100539363718454838066">
+      <img class="social-btn" src="../../../assets/icons/round-googleplus.svg">
+    </a>
+  </div>
+</div>

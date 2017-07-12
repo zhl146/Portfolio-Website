@@ -1,7 +1,7 @@
 @import "../../assets/sass-shared";
 
 .title {
-  font-size: 1.5em;
+  font-size: 2em;
   cursor: pointer;
   text-overflow: ellipsis;
   overflow: hidden
@@ -32,20 +32,8 @@
   color: #3A7CA5;
 }
 
-:host /deep/ pre {
-  padding: 24px;
-  color: white;
-  background: rgb(75,75,75);
-}
-
-h1 {
-  font-size: .5em;
-}
-
-
 .content {
   margin: 30px 0;
-  line-height: 1.5em;
 }
 
 .tag {
@@ -55,3 +43,38 @@ h1 {
   display: inline;
   padding: 10px;
 }
+
+/* blog post styles */
+/* need :host /deep/ to target things inside blog posts */
+
+:host /deep/ pre {
+  padding: 24px;
+  color: white;
+  background: rgb(120,120,120);
+  margin: 50px 0;
+}
+
+:host /deep/ p {
+  line-height: 1.7em;
+}
+
+:host /deep/ h1 {
+  font-size: 1.8em;
+}
+
+:host /deep/ h2 {
+  font-size: 1.5em;
+}
+
+:host /deep/ h3 {
+  font-size: 1.2em;
+}
+
+:host /deep/ h4 {
+  font-size: 1.1em;
+}
+
+:host /deep/ img {
+  margin: auto;
+}
+

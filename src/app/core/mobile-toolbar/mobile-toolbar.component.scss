@@ -1,0 +1,140 @@
+@import "../../../assets/sass-shared";
+
+.toolbar {
+  @extend %toolbar-responsive;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 56px;
+  background: rgb(55,55,55);
+  z-index: 100;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+
+  > span {
+    color: white;
+    font-size: 1.2em;
+    font-weight: 700;
+  }
+}
+
+$hamburger-width: 30px;
+$hamburger-height: 20px;
+$hamburger-line-width: 25px;
+$hamburger-line-height: 4px;
+
+#hamburger {
+  width: $hamburger-width;
+  height: $hamburger-height;
+  position: relative;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#hamburger span {
+  display: block;
+  position: absolute;
+  left: ( $hamburger-width - $hamburger-line-width ) / 2;
+  height: $hamburger-line-height;
+  width: $hamburger-line-width;
+  background: white;
+  opacity: 1;
+  transform: rotate(0deg) scaleX(1);
+  transition: .25s ease-in-out;
+}
+
+#hamburger span:nth-child(1) {
+  top: 0;
+}
+
+#hamburger span:nth-child(2),#hamburger span:nth-child(3) {
+  top: 1 / 2 * ($hamburger-height - 3 * $hamburger-line-height) + $hamburger-line-height;
+}
+
+#hamburger span:nth-child(4) {
+  top: ($hamburger-height - 3 * $hamburger-line-height) + 2 * $hamburger-line-height;
+}
+
+/* hamburger turns into X */
+
+#hamburger.open span:nth-child(1), #hamburger.open span:nth-child(4) {
+  top: 1 / 2 * ($hamburger-height - 3 * $hamburger-line-height) + $hamburger-line-height;
+  transform: scaleX(0);
+  opacity: 0;
+}
+
+#hamburger.open span:nth-child(2) {
+  transform: rotate(45deg) scaleX(.9);
+}
+
+#hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) scaleX(.9);
+}
+
+/* dropdown */
+.nav-card {
+  @extend %generic-card;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  background: rgb(55,55,55);
+  border-radius: 2px;
+  position: fixed;
+  transform: translateY(calc(-100% - 60px));
+  top: 56px;
+  width: 100vw;
+  transition: transform .2s ease-in-out;
+  z-index: 10;
+}
+
+.nav-card.open {
+  transform: translateY(0);
+}
+
+.nav-element {
+  cursor: pointer;
+  background-color: rgb(37,37,37);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  font-size: 1.2em;
+  border-bottom: 2px solid rgb(75,75,75);
+  transition: all .3s ease-out;
+}
+
+.nav-element:active, .nav-element:focus {
+  outline: none;
+}
+
+.nav-element:hover {
+  color: $accent;
+}
+
+.active-link {
+  border-left: 3px solid $accent;
+}
+
+.link-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px;
+  background-color: white;
+}
+
+.social-btn {
+  border-radius: 50%;
+  height: 2.5em;
+  width: 2.5em;
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+.social-btn:hover {
+  background: $accent;
+}

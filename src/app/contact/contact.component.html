@@ -3,6 +3,7 @@
   <div class="contact-content">
     <form class="contact-form"
           novalidate
+          (ngSubmit)="onSubmit()"
           [formGroup]="contactForm">
       <div class="info">
         <input type="text" formControlName="sender" placeholder="Your name">
@@ -13,7 +14,7 @@
                 formControlName="content"
                 placeholder="Your message" rows="4"></textarea>
 
-      <button class="submit-btn">Send</button>
+      <button type="submit" class="submit-btn">Send</button>
     </form>
     <div class="social-btn-container">
       <a href="https://github.com/zhl146">

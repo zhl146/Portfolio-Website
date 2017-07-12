@@ -3,19 +3,6 @@
 .projects-container {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: space-around;
   width:100%;
-}
-
-.project-container:hover {
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
-
-.project-name {
-  color: white;
-  font-size: 1em;
-  position: absolute;
-  margin: 15px;
-  bottom: 0;
-  left: 0;
 }
