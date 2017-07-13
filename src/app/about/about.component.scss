@@ -37,3 +37,19 @@
   padding: 15px;
   cursor: pointer;
 }
+
+.portrait-circle {
+  @media screen and (max-width: $mobile-break) {
+    display: block;
+  }
+  @media screen and (min-width: $mobile-break +1 ) {
+    display: none;
+  }
+  text-align: center;
+  > img {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+  }
+}
+
