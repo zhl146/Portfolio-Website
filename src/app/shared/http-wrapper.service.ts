@@ -6,7 +6,7 @@ export class HttpWrapper {
 
   private apiVersion = 'v1';
   private localUrl = 'http://localhost:8000';
-  private remoteUrl = 'https://zhenlu.info/portfolio';
+  private remoteUrl = 'https://zhenlu.info/main';
 
   // endpoints
   private blogEndpoint = 'posts';
