@@ -11,12 +11,17 @@ import { Observable } from 'rxjs/Observable';
 export class ProjectListComponent implements OnInit {
 
   projects: Project[] | Observable<Project[]>;
+  clickedProject: number | null = null;
 
   constructor( private projectsService: ProjectsDataService ) { }
 
   ngOnInit() {
     this.projectsService.retrieveProjects();
     this.projects = this.projectsService.getProjects();
+  }
+
+  animationState(index: number) {
+    return index === this.clickedProject ? 'up' : 'down';
   }
 
 }

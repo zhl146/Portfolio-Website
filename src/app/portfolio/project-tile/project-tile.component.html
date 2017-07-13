@@ -1,6 +1,7 @@
 <div class="project-container"
+     onclick=""
      [style.background-image]="'url(' + project.imgPath + ')'">
-  <div class="overlay">
+  <div class="overlay" [@translateUpDown]="state">
     <div class="project-name">
       {{project.name}}
       <p>{{project.description}}</p>

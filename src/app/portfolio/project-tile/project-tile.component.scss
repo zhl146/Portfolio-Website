@@ -55,13 +55,7 @@
   overflow: hidden;
   position: absolute;
   top: 0;
-  transform: translate(0, 100%);
-  transition: 200ms all ease-out;
   width: 100%;
-}
-
-.project-container:hover .overlay {
-  transform: translate(0, 0);
 }
 
 a {
