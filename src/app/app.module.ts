@@ -10,6 +10,7 @@ import { BlogModule } from './blog/blog.module';
 import { AboutModule } from './about/about.module';
 import { SharedModule } from './shared/shared.module';
 import { ContactModule } from './contact/contact.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ContactModule } from './contact/contact.module';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     CoreModule,
     AppRoutingModule,
     SharedModule,

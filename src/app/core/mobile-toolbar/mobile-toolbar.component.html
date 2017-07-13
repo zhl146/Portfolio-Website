@@ -54,3 +54,9 @@
     </a>
   </div>
 </div>
+
+<div *ngIf="isActive"
+     [@fadeInOut]
+     (click)="toggleActive()"
+     class="fullscreen-overlay">
+</div>
