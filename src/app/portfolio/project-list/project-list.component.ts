@@ -20,8 +20,8 @@ export class ProjectListComponent implements OnInit {
     this.projects = this.projectsService.getProjects();
   }
 
-  animationState(index: number) {
-    return index === this.clickedProject ? 'up' : 'down';
+  clickState(index: number) {
+    return index === this.clickedProject;
   }
 
 }

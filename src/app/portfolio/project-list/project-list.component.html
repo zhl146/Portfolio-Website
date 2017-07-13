@@ -7,7 +7,7 @@
     <div class="projects-container">
       <app-project *ngFor="let project of projects | async; let i=index"
                    (click)="clickedProject = i"
-                   [state]="animationState(i)"
+                   [state]="clickState(i)"
                    [project]="project">
       </app-project>
     </div>

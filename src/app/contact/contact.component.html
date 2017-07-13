@@ -6,7 +6,7 @@
           (ngSubmit)="onSubmit()"
           [formGroup]="contactForm">
       <div class="info">
-        <div>
+        <div class="info-input-container">
           <input type="text" formControlName="sender"
                  placeholder="Your name"
                  [ngClass]="validClass('sender')">
@@ -14,7 +14,7 @@
         </div>
 
         <div class="spacer"></div>
-        <div>
+        <div class="info-input-container">
           <input type="email"
                  formControlName="senderEmail"
                  placeholder="Your e-mail address"

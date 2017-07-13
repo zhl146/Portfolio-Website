@@ -15,31 +15,34 @@
 .info {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
   > .spacer {
-    flex: .4 1 auto;
+    flex: .3 1 auto;
+  }
+  > .info-input-container {
+    flex: auto;
+    height: 45px;
+  }
+  input {
+    height: 100%;
   }
 }
 
 .message {
-  width: 100%;
+  margin-top: 40px;
   height: 200px;
-}
-
-textarea {
   resize:none;
+  display: block;
 }
 
 input,
 textarea,
 select {
+  width: 100%;
   outline: none;
-  display: block;
   border: none;
   border-bottom: 1px solid $divider-color;
   background: transparent;
   margin-bottom: 10px;
-  height: 45px;
   font-size: 1em;
   line-height: 1.3em;
 }
@@ -87,6 +90,7 @@ select {
 }
 
 .error {
+  margin-top: 0;
   font-size: .8em;
   color: red;
 }

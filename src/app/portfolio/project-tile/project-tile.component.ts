@@ -5,20 +5,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 @Component({
   selector: 'app-project',
   templateUrl: './project-tile.component.html',
-  styleUrls: ['./project-tile.component.scss'],
-  animations: [
-    trigger('translateUpDown', [
-      state('down', style({
-        transform: 'translateY(100%)'
-      })),
-      state('up', style({
-        transform: 'translateY(0)'
-      })),
-      transition('*=>*', [
-        animate('200ms ease-in-out')
-      ])
-    ])
-  ]
+  styleUrls: ['./project-tile.component.scss']
 })
 export class ProjectTileComponent implements OnInit {
 
