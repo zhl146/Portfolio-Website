@@ -49,7 +49,6 @@ export class BlogListComponent implements OnInit {
             this.makeRoute(),
             this.postsPerPage,
             this.pageCounter * this.postsPerPage);
-          console.log(this.blogSummaries)
         }
       );
   }
@@ -65,12 +64,10 @@ export class BlogListComponent implements OnInit {
     if (this.queryDay !== undefined) {
       route = route + this.queryDay + '/';
     }
-    console.log(route);
     return route;
   }
 
   onBlogMore(title_slug: string) {
-    console.log(title_slug);
     this.router.navigate(['blog', 'post', title_slug]);
   }
 }

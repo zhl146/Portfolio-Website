@@ -24,7 +24,6 @@ export class BlogDataService {
       .subscribe(
         (response) => {
           this.blogSummaries.next(response.json().posts);
-          console.log(this.blogSummaries)
         }
       )
   }

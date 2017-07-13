@@ -35,11 +35,9 @@ export class ContactComponent implements OnInit {
       };
 
       const data = JSON.stringify(emailJson);
-      console.log(data);
       this.http.sendEmail(data)
         .subscribe(
           (response) => {
-            console.log(response)
           }
         )
     }

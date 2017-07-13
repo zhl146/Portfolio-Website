@@ -20,7 +20,6 @@ export class BlogPostComponent implements OnInit {
       .subscribe(
         (params) => {
           this.blogService.retrieveBlogPost(params.slug);
-          console.log(this.blogPost)
         }
       )
   }
