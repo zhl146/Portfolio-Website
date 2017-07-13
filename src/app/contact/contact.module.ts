@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from './contact.component';
+import { ThanksComponent } from './thanks/thanks.component';
 
 @NgModule({
   imports: [
@@ -11,7 +12,8 @@ import { ContactComponent } from './contact.component';
     SharedModule
   ],
   declarations: [
-    ContactComponent
+    ContactComponent,
+    ThanksComponent
   ],
   exports: [
     ContactComponent

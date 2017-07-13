@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { HttpWrapper } from '../shared/http-wrapper.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -12,13 +13,14 @@ export class ContactComponent implements OnInit {
   contactForm;
 
   constructor( private fb: FormBuilder,
-               private http: HttpWrapper ) { }
+               private http: HttpWrapper,
+               private router: Router) { }
 
   ngOnInit() {
     this.contactForm = this.fb.group({
-      message: this.fb.control('', Validators.required),
-      senderEmail: this.fb.control('', Validators.email),
-      sender: this.fb.control('', Validators.required)
+        message: this.fb.control('', Validators.required),
+        senderEmail: this.fb.control('', Validators.email),
+        sender: this.fb.control('', Validators.required)
       }
     );
   }
@@ -36,10 +38,8 @@ export class ContactComponent implements OnInit {
 
       const data = JSON.stringify(emailJson);
       this.http.sendEmail(data)
-        .subscribe(
-          (response) => {
-          }
-        )
+        .subscribe()
+      this.router.navigate(['thanks']);
     }
   }
 
